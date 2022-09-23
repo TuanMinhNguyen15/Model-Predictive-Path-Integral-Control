@@ -1,1 +1,3 @@
-# Model-Predictive-Path-Integral-Co
+# Model Predictive Path Integral (MPPI) Control
+
+$a \le b$
