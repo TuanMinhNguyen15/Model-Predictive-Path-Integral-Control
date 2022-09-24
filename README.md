@@ -25,7 +25,13 @@ Given the discretized system model:
  
  Kth sample: $u_0^{K-1}, u_1^{K-1},..., u_{N-1}^{K-1} \Rightarrow x_0^{K-1}, x_1^{K-1},..., x_N^{K-1} \Rightarrow V^{K-1}$
  
- ** Note: **
+ **Note:**  supperscript represents sample index, while subscript represents timestep index.
+ 
+ Given an initial guess of or a previously obtained optimal control sequence $U^\* \equiv \\{ u_0^\*,u_1^\*,...,u_{N-1}^\* \\}   $, we can sample the K control sequences near $U^\*$ and the next optimal control sequence is calculated by the following weighted sum:
+ 
+ $$  U_{new}^\* $$
+ 
+ 
  
  
  
