@@ -1,3 +1,18 @@
 # Model Predictive Path Integral (MPPI) Control
 
-In a nutshell, MPPI is the stochastic version of Model Predictive Control (MPC). Unlike MPC where the optimal control sequence $u_0, u_1,..., u_{N-1}$ is determined by solving a convex optimizetion problem, the "optimial" control sequence of MPPI is found by calculating the weight sum of many randomly sampled control sequences in which the lower the objective cost resulted from a sampled control sequence, the larger the weight of that sampled control sequence will be. Because MPPI is a sample-based planner, the more samples that MPPI has, the better and more reliable its weighted-sum control sequence will be, and, therefore, we can use parallel computing such as multi-threading to simulstaneously sample thousands of control sequences. Moreover, because MPPI doesn't care if the system is linear or the problem is convex, MPPI provides us the flexibility to control nonlinear systems whose objective functions can be non-convex. Even though the solution of MPPI will be sub-optimal compared to that of standard MPC, with large enough samples, MPPI can output good enough controls that get the job done. 
+In a nutshell, MPPI is the stochastic version of Model Predictive Control (MPC). Unlike MPC where the optimal control sequence $u_0, u_1,..., u_{N-1}$ is determined by solving a convex optimization problem, the "optimial" control sequence of MPPI is found by calculating the weight sum of many randomly sampled control sequences in which the lower the objective cost resulted from a sampled control sequence, the larger the weight of that sampled control sequence will be. Because MPPI is a sample-based planner, the more samples that MPPI has, the better and more reliable its weighted-sum control sequence will be, and, therefore, we can use parallel computing such as multi-threading to simulstaneously sample thousands of control sequences. Moreover, because MPPI doesn't care if the system is linear or the problem is convex, MPPI provides us the flexibility to control nonlinear systems whose objective functions can be non-convex!
+
+## MPPI Formulation
+
+* State: $x \in  R^n$
+* Input: $u \in R^m$
+* Prediction Horizon: $N \in R^+$
+* Trajectory: $X \equiv \\{x_0, x_1,..., x_N\\}$
+* Control Sequence: $U \equiv \\{u_0, u_1,..., u_{N-1}\\}$
+* Cost Function: $V(X,U) \in R$
+
+Given the discretized system model:
+
+  $$ x_{n+1} = f(x_n,u_n) $$
+  
+  , and suppose at every timestep we sample K control sequences which would result in K trajectories for a given initial state. For each sampled control sequence U and its corresponding trajectory X, we can use the cost function V(X,U) to evaluate the system's behavior such that the lower the cost V, the better the sampled control sequence U in driving the system trajectory X to achieve some desirable objectives. 
