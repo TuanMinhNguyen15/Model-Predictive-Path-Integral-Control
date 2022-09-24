@@ -15,4 +15,10 @@ Given the discretized system model:
 
   $$ x_{n+1} = f(x_n,u_n) $$
   
-  , and suppose at every timestep we sample K control sequences which would result in K trajectories for a given initial state. For each sampled control sequence U and its corresponding trajectory X, we can use the cost function V(X,U) to evaluate the system's behavior such that the lower the cost V, the better the sampled control sequence U in driving the system trajectory X to achieve some desirable objectives. 
+  , and suppose at every timestep we sample K control sequences which would result in K trajectories for a given initial state $x_0$. For each sampled control sequence U and its corresponding trajectory X, we can use the cost function V(X,U) to evaluate the system's behavior such that the lower the cost V, the better the sampled control sequence U in driving the system trajectory X to achieve some desirable objectives. 
+  
+ 1st sample: $u^0_0, u^0_1,..., u^0_{N-1}$
+ 
+ 2nd sample: $u^1_0, u^1_1,..., u^1_{N-1}$
+ 
+ Kth sample: $
