@@ -29,7 +29,21 @@ Given the discretized system model:
  
  Given an initial guess of or a previously obtained optimal control sequence $U^\* \equiv \\{ u_0^\*,u_1^\*,...,u_{N-1}^\* \\}   $, we can sample the K control sequences near $U^\*$ and the next optimal control sequence is calculated by the following weighted sum:
  
- $$  U_{new}^\* = U^\* + \frac{1}{2}$$
+ $$  U_{new}^\* = U^\* + \frac{\sum\limits_{i=0}^{K-1} w_i * (U_i-U^\*)}{\sum\limits_{i=0}^{K-1} w_i}$$
+ 
+ $$\forall \quad w_i=e^{-V^i/\lambda}$$
+ 
+ **Note:** $\lambda$ is a constant parameter
+ 
+ After calculating $U_{new}^\*$, its first element e.g. $u_0^\*$ will be fed into the system, then $U_{new}^\*$ becomes $U^\*$, and the process of finding the weighted sum is repeated for the next state of the system. 
+ 
+ ## Demo
+ 
+ ### Block Moving 1D
+ 
+ ### Pendulum
+ 
+ ### Mobile Robot
  
  
  
