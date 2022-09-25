@@ -116,7 +116,11 @@ Given the discretized system model:
   ![alt text](https://github.com/TuanMinhNguyen15/Model-Predictive-Path-Integral-Control/raw/main/images/robot_steering_vs_time.png)
   
  
+ ## References
  
+ [Video Tutorial](https://www.youtube.com/watch?v=19QLyMuQ_BE&ab_channel=NeuromorphicWorkshopTelluride)
+ 
+ [Paper](https://arxiv.org/abs/1509.01149)
  
  
  
