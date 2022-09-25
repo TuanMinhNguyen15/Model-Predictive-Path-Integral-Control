@@ -41,9 +41,15 @@ Given the discretized system model:
  
  ### Block Moving 1D
  
+ ![alt text](https://github.com/TuanMinhNguyen15/Model-Predictive-Path-Integral-Control/raw/main/images/blockmoving_demo.PNG)
+ 
  ### Pendulum
  
+  ![alt text](https://github.com/TuanMinhNguyen15/Model-Predictive-Path-Integral-Control/raw/main/images/pendulum_demo.PNG)
+ 
  ### Mobile Robot
+ 
+  ![alt text](https://github.com/TuanMinhNguyen15/Model-Predictive-Path-Integral-Control/raw/main/images/mobilerobot_demo.PNG)
  
  
  
