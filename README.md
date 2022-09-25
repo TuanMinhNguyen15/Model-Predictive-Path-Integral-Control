@@ -43,13 +43,78 @@ Given the discretized system model:
  
  ![alt text](https://github.com/TuanMinhNguyen15/Model-Predictive-Path-Integral-Control/raw/main/images/blockmoving_demo.PNG)
  
+ **System Model:**
+ 
+ $m\ddot{d} = u$
+ 
+ $\forall \quad m = 1$
+ 
+ $\qquad u \in [-1,1]$
+ 
+ 
+ 
+ **Objective:** 
+ 
+ To move and stabilize the block at the position d = 1
+ 
+ **Results:**
+ 
+ ![alt text](https://github.com/TuanMinhNguyen15/Model-Predictive-Path-Integral-Control/raw/main/images/blockmoving1d_state_vs_time.png)
+ 
+ ![alt text](https://github.com/TuanMinhNguyen15/Model-Predictive-Path-Integral-Control/raw/main/images/blockmoving1d_input_vs_time.png)
+ 
  ### Pendulum
  
   ![alt text](https://github.com/TuanMinhNguyen15/Model-Predictive-Path-Integral-Control/raw/main/images/pendulum_demo.PNG)
+  
+   **System Model:**
+   
+   $\ddot{\theta} = \frac{-g}{L}\sin(\theta) - \frac{k}{m}\dot{\theta} + \frac{u}{mL^2}$
+   
+   $\forall \quad m = 1$
+   
+   $\qquad L = 1$
+   
+   $\qquad k = 2$
+   
+   $\qquad g = 9.81$
+   
+   **Objective:** 
+   
+   To stabilize the pendulum at the angle of $\frac{\pi}{4}$
+   
+   **Results:**
+   
+   ![alt text](https://github.com/TuanMinhNguyen15/Model-Predictive-Path-Integral-Control/raw/main/images/pendulum_state_vs_time.png)
+ 
+   ![alt text](https://github.com/TuanMinhNguyen15/Model-Predictive-Path-Integral-Control/raw/main/images/pendulum_input_vs_time.png)
  
  ### Mobile Robot
  
   ![alt text](https://github.com/TuanMinhNguyen15/Model-Predictive-Path-Integral-Control/raw/main/images/mobilerobot_demo.PNG)
+  
+  **System Model:**
+  
+  $\dot{x} = v\cos(\theta)$
+  
+  $\dot{y} = v\sin(\theta)$
+  
+  $\dot{\theta} = \frac{v}{L}\tan(\delta)$
+  
+  $\forall \quad L = 1$
+  
+  **Objective:** 
+  
+  To drive the robot to approach the x-axis and then traverse in the positive direction
+  
+  **Results:**
+  
+  ![alt text](https://github.com/TuanMinhNguyen15/Model-Predictive-Path-Integral-Control/raw/main/images/robot_x_vs_y.png)
+ 
+  ![alt text](https://github.com/TuanMinhNguyen15/Model-Predictive-Path-Integral-Control/raw/main/images/robot_velocity_vs_time.png)
+  
+  ![alt text](https://github.com/TuanMinhNguyen15/Model-Predictive-Path-Integral-Control/raw/main/images/robot_steering_vs_time.png)
+  
  
  
  
